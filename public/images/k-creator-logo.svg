@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient (Deep Velvety Royal Violet / Obsidian) -->
+    <radialGradient id="discBg" cx="50%" cy="45%" r="58%">
+      <stop offset="0%" stop-color="#2a104e"/>
+      <stop offset="45%" stop-color="#180730"/>
+      <stop offset="80%" stop-color="#0c0319"/>
+      <stop offset="100%" stop-color="#040108"/>
+    </radialGradient>
+
+    <!-- 24K Luxury Metallic Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="20%" stop-color="#fef08a"/>
+      <stop offset="45%" stop-color="#f59e0b"/>
+      <stop offset="70%" stop-color="#d97706"/>
+      <stop offset="90%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+
+    <!-- Gold Bevel Gradient for 3D K -->
+    <linearGradient id="goldBevel" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#fde047"/>
+      <stop offset="60%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+
+    <!-- Glowing Purple Ribbon Swoosh Gradient -->
+    <linearGradient id="ribbonGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9333ea"/>
+      <stop offset="40%" stop-color="#a855f7"/>
+      <stop offset="80%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+
+    <!-- "Creator" Script Gradient (Gold to Violet-Pink) -->
+    <linearGradient id="creatorScriptGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="30%" stop-color="#f59e0b"/>
+      <stop offset="60%" stop-color="#d946ef"/>
+      <stop offset="85%" stop-color="#c026d3"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Lens Flare Glow -->
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="20%" stop-color="#fef08a" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="goldShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.85"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#f59e0b" flood-opacity="0.45"/>
+    </filter>
+
+    <filter id="purpleGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="circleBadgeClip">
+      <circle cx="500" cy="500" r="445"/>
+    </clipPath>
+  </defs>
+
+  <!-- Deep Outer Black Field -->
+  <rect width="1000" height="1000" fill="#040108"/>
+
+  <!-- ================= CIRCULAR BADGE INNER ================= -->
+  <g clip-path="url(#circleBadgeClip)">
+    <!-- Velvety Violet / Obsidian Background -->
+    <circle cx="500" cy="500" r="445" fill="url(#discBg)"/>
+
+    <!-- Subtle Ambient Violet Flare Behind K -->
+    <circle cx="500" cy="420" r="260" fill="#9333ea" opacity="0.25" filter="url(#purpleGlow)"/>
+    <circle cx="480" cy="460" r="180" fill="#f59e0b" opacity="0.12" filter="url(#purpleGlow)"/>
+
+    <!-- ================= SPARKLE STARS ================= -->
+    <!-- Left Star 1 -->
+    <g transform="translate(280, 385)">
+      <polygon points="0,-18 5,-5 18,0 5,5 0,18 -5,5 -18,0 -5,-5" fill="url(#goldGrad)" filter="url(#goldShadow)"/>
+      <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+    </g>
+    <!-- Left Star 2 (Small Purple) -->
+    <g transform="translate(250, 425)">
+      <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#c084fc"/>
+    </g>
+
+    <!-- Right Star 1 (Gold) -->
+    <g transform="translate(765, 470)">
+      <polygon points="0,-16 4,-4 16,0 4,4 0,16 -4,4 -16,0 -4,-4" fill="url(#goldGrad)" filter="url(#goldShadow)"/>
+      <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+    </g>
+    <!-- Right Star 2 (Small Purple) -->
+    <g transform="translate(798, 515)">
+      <polygon points="0,-10 2.5,-2.5 10,0 2.5,2.5 0,10 -2.5,2.5 -10,0 -2.5,-2.5" fill="#c084fc"/>
+    </g>
+
+    <!-- ================= LETTER "K" (GRAND ROMAN SERIF) ================= -->
+    <g filter="url(#goldShadow)" id="letterK">
+      <!-- Left Vertical Stem with Serifs -->
+      <!-- Base Top Serif -->
+      <path d="M295 260 L495 260 L495 285 L445 295 L445 540 L495 550 L495 575 L295 575 L295 550 L345 540 L345 295 L295 285 Z" fill="url(#goldGrad)"/>
+      <!-- Stem 3D Inner Bevel Highlight -->
+      <path d="M345 295 L405 295 L405 540 L345 540 Z" fill="url(#goldBevel)" opacity="0.6"/>
+
+      <!-- Diagonal Upper Arm of K -->
+      <!-- Curves smoothly from center stem to upper right with terminal bracket -->
+      <path d="M430 430 L590 270 L730 260 L730 280 L675 290 L520 445 Z" fill="url(#goldGrad)"/>
+      <path d="M450 435 L600 285 L675 290 L520 445 Z" fill="url(#goldBevel)" opacity="0.4"/>
+
+      <!-- Diagonal Lower Leg of K (Graceful sweeping flare) -->
+      <path d="M480 395 L720 575 L745 575 C720 550 670 510 610 470 L480 395 Z" fill="url(#goldGrad)"/>
+      <path d="M480 415 C540 450 640 535 735 575 C680 575 580 570 520 575 L445 540 Z" fill="url(#goldGrad)"/>
+      <!-- Curved Tail Accent of Lower Leg -->
+      <path d="M600 480 C680 530 730 560 745 575 L710 578 C650 540 590 495 550 460 Z" fill="url(#goldBevel)"/>
+    </g>
+
+    <!-- ================= GLOWING PURPLE RIBBON SWOOSH ================= -->
+    <!-- Wraps dynamically from behind the stem, across the center of K, swirling upward right -->
+    <g id="ribbonSwoosh" filter="url(#purpleGlow)">
+      <!-- Main Ribbon Body -->
+      <path d="M245 480 C240 515 280 525 335 495 C410 455 530 380 675 320 C735 295 780 325 780 355 C780 375 750 395 725 385 C665 360 590 395 485 450 C380 505 285 535 245 480 Z" fill="url(#ribbonGrad)"/>
+      <!-- Glowing Inner Sheen Edge of Ribbon -->
+      <path d="M255 485 C290 520 380 490 485 440 C590 390 680 345 745 340" stroke="#fdf4ff" stroke-width="3" fill="none" opacity="0.85"/>
+      <!-- Soft Under-Shadow of Ribbon -->
+      <path d="M335 495 C410 455 530 380 675 320" stroke="#4c1d95" stroke-width="5" fill="none" opacity="0.6"/>
+    </g>
+
+    <!-- ================= ROYAL GOLDEN CROWN ON "K" ================= -->
+    <!-- Perched atop the left vertical column of the K (with 5 spires & purple gems) -->
+    <g transform="translate(400, 195)" filter="url(#goldShadow)" id="crown">
+      <!-- Crown Velvet Cushion Base (Purple) -->
+      <ellipse cx="0" cy="40" rx="90" ry="12" fill="#581c87" stroke="#3b0764" stroke-width="2"/>
+      
+      <!-- Crown Circlet Headband (Gold with Diamond Insets) -->
+      <path d="M-85 32 C-45 42 45 42 85 32 L88 44 C45 54 -45 54 -88 44 Z" fill="url(#goldGrad)" stroke="#78350f" stroke-width="1.5"/>
+      <ellipse cx="0" cy="43" rx="8" ry="4" fill="#a855f7" stroke="#fbbf24" stroke-width="1"/>
+      <ellipse cx="-45" cy="41" rx="6" ry="3.5" fill="#a855f7" stroke="#fbbf24" stroke-width="1"/>
+      <ellipse cx="45" cy="41" rx="6" ry="3.5" fill="#a855f7" stroke="#fbbf24" stroke-width="1"/>
+
+      <!-- 5 Crown Spires (Golden Arches) -->
+      <!-- Center Spire (Tallest) -->
+      <path d="M0 -30 L-20 32 C-10 34 10 34 20 32 Z" fill="url(#goldGrad)"/>
+      <polygon points="0,-18 12,10 0,30 -12,10" fill="#a855f7" stroke="#ffffff" stroke-width="1"/>
+
+      <!-- Middle-Left Spire -->
+      <path d="M-45 -12 L-65 32 C-55 33 -35 33 -25 32 Z" fill="url(#goldGrad)"/>
+      <polygon points="-45,-2 -35,16 -45,28 -55,16" fill="#7e22ce" stroke="#fde047" stroke-width="1"/>
+
+      <!-- Middle-Right Spire -->
+      <path d="M45 -12 L25 32 C35 33 55 33 65 32 Z" fill="url(#goldGrad)"/>
+      <polygon points="45,-2 55,16 45,28 35,16" fill="#7e22ce" stroke="#fde047" stroke-width="1"/>
+
+      <!-- Outer-Left Spire -->
+      <path d="M-78 0 L-85 32 L-65 32 Z" fill="url(#goldGrad)"/>
+      <!-- Outer-Right Spire -->
+      <path d="M78 0 L65 32 L85 32 Z" fill="url(#goldGrad)"/>
+
+      <!-- Pearl / Gold Balls on Spire Tips -->
+      <circle cx="0" cy="-32" r="10" fill="url(#goldGrad)" stroke="#ffffff" stroke-width="1.5"/>
+      <circle cx="-45" cy="-14" r="7.5" fill="url(#goldGrad)"/>
+      <circle cx="45" cy="-14" r="7.5" fill="url(#goldGrad)"/>
+      <circle cx="-78" cy="-2" r="6" fill="url(#goldGrad)"/>
+      <circle cx="78" cy="-2" r="6" fill="url(#goldGrad)"/>
+
+      <!-- Center Gem Sparkle -->
+      <circle cx="0" cy="5" r="2.5" fill="#ffffff" filter="url(#purpleGlow)"/>
+    </g>
+
+    <!-- ================= PURPLE & GOLD FLOWER PETALS (Lower Right) ================= -->
+    <g transform="translate(685, 505)" filter="url(#goldShadow)">
+      <!-- Left Petal (Violet) -->
+      <path d="M0 0 C-10 -25 -5 -45 10 -55 C20 -40 18 -20 0 0 Z" fill="#9333ea" stroke="#c084fc" stroke-width="1.5"/>
+      <!-- Center Petal (Gold) -->
+      <path d="M5 2 C20 -15 35 -25 45 -22 C42 -8 30 5 5 2 Z" fill="url(#goldGrad)"/>
+      <!-- Right Petal (Deep Purple) -->
+      <path d="M0 5 C15 5 35 15 38 25 C25 28 10 20 0 5 Z" fill="#7e22ce"/>
+    </g>
+
+    <!-- ================= "Creator" SCRIPT WORDMARK ================= -->
+    <g filter="url(#goldShadow)" transform="translate(500, 685)">
+      <!-- Glowing Drop Shadow Behind Script -->
+      <text x="0" y="5" text-anchor="middle" font-family="'Brush Script MT', 'Dancing Script', 'Great Vibes', cursive, sans-serif" font-size="160" font-weight="bold" font-style="italic" fill="#3b0764" opacity="0.8">
+        Creator
+      </text>
+
+      <!-- Gradient Script Face (Gold transitioning to Violet-Pink) -->
+      <text x="0" y="0" text-anchor="middle" font-family="'Brush Script MT', 'Dancing Script', 'Great Vibes', cursive, sans-serif" font-size="160" font-weight="bold" font-style="italic" fill="url(#creatorScriptGrad)" stroke="#ffffff" stroke-width="1.2">
+        Creator
+      </text>
+    </g>
+
+    <!-- ================= BOTTOM DIVIDER & PURPLE HEART ================= -->
+    <g transform="translate(500, 800)" filter="url(#goldShadow)">
+      <!-- Left Gold Tapered Line -->
+      <path d="M-190 0 L-35 0" stroke="url(#goldGrad)" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M-160 -4 L-50 -4" stroke="url(#goldGrad)" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+
+      <!-- Right Gold Tapered Line -->
+      <path d="M35 0 L190 0" stroke="url(#goldGrad)" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M50 -4 L160 -4" stroke="url(#goldGrad)" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+
+      <!-- Center Purple Heart with Gold Bezel -->
+      <g transform="translate(-16, -16)">
+        <!-- Outer Gold Heart Rim -->
+        <path d="M16 28.5 L14.2 26.8 C7.5 20.7 3.2 16.8 3.2 11.9 C3.2 7.9 6.3 4.8 10.3 4.8 C12.6 4.8 14.7 5.8 16 7.5 C17.3 5.8 19.4 4.8 21.7 4.8 C25.7 4.8 28.8 7.9 28.8 11.9 C28.8 16.8 24.5 20.7 17.8 26.8 Z" fill="url(#goldGrad)"/>
+        <!-- Inner Purple Heart Cavity -->
+        <path d="M16 26 L14.6 24.6 C8.5 19.1 4.8 15.6 4.8 11.9 C4.8 8.7 7.2 6.4 10.3 6.4 C12.3 6.4 14.3 7.4 16 9 C17.7 7.4 19.7 6.4 21.7 6.4 C24.8 6.4 27.2 8.7 27.2 11.9 C27.2 15.6 23.5 19.1 17.4 24.6 Z" fill="#9333ea"/>
+        <!-- Heart Highlight -->
+        <circle cx="11" cy="10" r="2" fill="#ffffff" opacity="0.75"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= DUAL METALLIC RIMS (GOLD & VIOLET) ================= -->
+  <!-- Inner Violet Border -->
+  <circle cx="500" cy="500" r="448" fill="none" stroke="#7e22ce" stroke-width="6"/>
+
+  <!-- Outer Heavy 24K Gold Rim -->
+  <circle cx="500" cy="500" r="460" fill="none" stroke="url(#goldGrad)" stroke-width="18" filter="url(#goldShadow)"/>
+  <circle cx="500" cy="500" r="460" fill="none" stroke="#fffbeb" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- ================= RADIANT LENS FLARE STARBURSTS ================= -->
+  <!-- Top-Left Lens Flare (~10 o'clock) -->
+  <g transform="translate(165, 235)">
+    <circle cx="0" cy="0" r="50" fill="url(#starGlow)"/>
+    <polygon points="0,-70 4,-8 70,0 4,8 0,70 -4,8 -70,0 -4,-8" fill="#ffffff"/>
+    <polygon points="0,-45 3,-5 45,0 3,5 0,45 -3,5 -45,0 -3,-5" fill="url(#goldGrad)"/>
+    <circle cx="0" cy="0" r="7" fill="#ffffff"/>
+  </g>
+
+  <!-- Bottom-Left Lens Flare (~7 o'clock) -->
+  <g transform="translate(205, 805)">
+    <circle cx="0" cy="0" r="45" fill="url(#starGlow)"/>
+    <polygon points="0,-60 3.5,-7 60,0 3.5,7 0,60 -3.5,7 -60,0 -3.5,-7" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+  </g>
+
+  <!-- Right Accent Glint (~3 o'clock) -->
+  <g transform="translate(930, 535)">
+    <circle cx="0" cy="0" r="25" fill="url(#starGlow)"/>
+    <polygon points="0,-35 2,-4 35,0 2,4 0,35 -2,4 -35,0 -2,-4" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="4" fill="#ffffff"/>
+  </g>
+</svg>
